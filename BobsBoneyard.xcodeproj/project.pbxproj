@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B519391713CFF09D009840E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391613CFF09D009840E5 /* UIKit.framework */; };
+		B519391913CFF09D009840E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391813CFF09D009840E5 /* Foundation.framework */; };
+		B519391B13CFF09D009840E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391A13CFF09D009840E5 /* CoreGraphics.framework */; };
+		B519392113CFF09D009840E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B519391F13CFF09D009840E5 /* InfoPlist.strings */; };
+		B519392413CFF09D009840E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B519392313CFF09D009840E5 /* main.m */; };
+		B519392713CFF09D009840E5 /* BobsBoneyardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B519392613CFF09D009840E5 /* BobsBoneyardAppDelegate.m */; };
+		B519392A13CFF09D009840E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519392813CFF09D009840E5 /* MainWindow.xib */; };
+		B519392D13CFF09D009840E5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519392C13CFF09D009840E5 /* FirstViewController.m */; };
+		B519393013CFF09D009840E5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519392F13CFF09D009840E5 /* SecondViewController.m */; };
+		B519393313CFF09D009840E5 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519393113CFF09D009840E5 /* FirstView.xib */; };
+		B519393613CFF09D009840E5 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519393413CFF09D009840E5 /* SecondView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B519391213CFF09D009840E5 /* BobsBoneyard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobsBoneyard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B519391613CFF09D009840E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B519391813CFF09D009840E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B519391A13CFF09D009840E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B519391E13CFF09D009840E5 /* BobsBoneyard-Info.plist */ = {isa = PBXFileReference; path = "BobsBoneyard-Info.plist"; sourceTree = "<group>"; };
+		B519392013CFF09D009840E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B519392213CFF09D009840E5 /* BobsBoneyard-Prefix.pch */ = {isa = PBXFileReference; path = "BobsBoneyard-Prefix.pch"; sourceTree = "<group>"; };
+		B519392313CFF09D009840E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B519392513CFF09D009840E5 /* BobsBoneyardAppDelegate.h */ = {isa = PBXFileReference; path = BobsBoneyardAppDelegate.h; sourceTree = "<group>"; };
+		B519392613CFF09D009840E5 /* BobsBoneyardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BobsBoneyardAppDelegate.m; sourceTree = "<group>"; };
+		B519392913CFF09D009840E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B519392B13CFF09D009840E5 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		B519392C13CFF09D009840E5 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B519392E13CFF09D009840E5 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		B519392F13CFF09D009840E5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		B519393213CFF09D009840E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		B519393513CFF09D009840E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B519390F13CFF09D009840E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B519391713CFF09D009840E5 /* UIKit.framework in Frameworks */,
+				B519391913CFF09D009840E5 /* Foundation.framework in Frameworks */,
+				B519391B13CFF09D009840E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B519390713CFF09D009840E5 = {
+			isa = PBXGroup;
+			children = (
+				B519391C13CFF09D009840E5 /* BobsBoneyard */,
+				B519391513CFF09D009840E5 /* Frameworks */,
+				B519391313CFF09D009840E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B519391313CFF09D009840E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B519391213CFF09D009840E5 /* BobsBoneyard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B519391513CFF09D009840E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B519391613CFF09D009840E5 /* UIKit.framework */,
+				B519391813CFF09D009840E5 /* Foundation.framework */,
+				B519391A13CFF09D009840E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B519391C13CFF09D009840E5 /* BobsBoneyard */ = {
+			isa = PBXGroup;
+			children = (
+				B519392513CFF09D009840E5 /* BobsBoneyardAppDelegate.h */,
+				B519392613CFF09D009840E5 /* BobsBoneyardAppDelegate.m */,
+				B519392813CFF09D009840E5 /* MainWindow.xib */,
+				B519392B13CFF09D009840E5 /* FirstViewController.h */,
+				B519392C13CFF09D009840E5 /* FirstViewController.m */,
+				B519392E13CFF09D009840E5 /* SecondViewController.h */,
+				B519392F13CFF09D009840E5 /* SecondViewController.m */,
+				B519393113CFF09D009840E5 /* FirstView.xib */,
+				B519393413CFF09D009840E5 /* SecondView.xib */,
+				B519391D13CFF09D009840E5 /* Supporting Files */,
+			);
+			path = BobsBoneyard;
+			sourceTree = "<group>";
+		};
+		B519391D13CFF09D009840E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B519391E13CFF09D009840E5 /* BobsBoneyard-Info.plist */,
+				B519391F13CFF09D009840E5 /* InfoPlist.strings */,
+				B519392213CFF09D009840E5 /* BobsBoneyard-Prefix.pch */,
+				B519392313CFF09D009840E5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B519391113CFF09D009840E5 /* BobsBoneyard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B519393913CFF09D009840E5 /* Build configuration list for PBXNativeTarget "BobsBoneyard" */;
+			buildPhases = (
+				B519390E13CFF09D009840E5 /* Sources */,
+				B519390F13CFF09D009840E5 /* Frameworks */,
+				B519391013CFF09D009840E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BobsBoneyard;
+			productName = BobsBoneyard;
+			productReference = B519391213CFF09D009840E5 /* BobsBoneyard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B519390913CFF09D009840E5 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B519390C13CFF09D009840E5 /* Build configuration list for PBXProject "BobsBoneyard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B519390713CFF09D009840E5;
+			productRefGroup = B519391313CFF09D009840E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B519391113CFF09D009840E5 /* BobsBoneyard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B519391013CFF09D009840E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B519392113CFF09D009840E5 /* InfoPlist.strings in Resources */,
+				B519392A13CFF09D009840E5 /* MainWindow.xib in Resources */,
+				B519393313CFF09D009840E5 /* FirstView.xib in Resources */,
+				B519393613CFF09D009840E5 /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B519390E13CFF09D009840E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B519392413CFF09D009840E5 /* main.m in Sources */,
+				B519392713CFF09D009840E5 /* BobsBoneyardAppDelegate.m in Sources */,
+				B519392D13CFF09D009840E5 /* FirstViewController.m in Sources */,
+				B519393013CFF09D009840E5 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B519391F13CFF09D009840E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B519392013CFF09D009840E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B519392813CFF09D009840E5 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B519392913CFF09D009840E5 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B519393113CFF09D009840E5 /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B519393213CFF09D009840E5 /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		B519393413CFF09D009840E5 /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B519393513CFF09D009840E5 /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B519393713CFF09D009840E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B519393813CFF09D009840E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B519393A13CFF09D009840E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBoneyard/BobsBoneyard-Prefix.pch";
+				INFOPLIST_FILE = "BobsBoneyard/BobsBoneyard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B519393B13CFF09D009840E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBoneyard/BobsBoneyard-Prefix.pch";
+				INFOPLIST_FILE = "BobsBoneyard/BobsBoneyard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B519390C13CFF09D009840E5 /* Build configuration list for PBXProject "BobsBoneyard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B519393713CFF09D009840E5 /* Debug */,
+				B519393813CFF09D009840E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B519393913CFF09D009840E5 /* Build configuration list for PBXNativeTarget "BobsBoneyard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B519393A13CFF09D009840E5 /* Debug */,
+				B519393B13CFF09D009840E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B519390913CFF09D009840E5 /* Project object */;
+}
