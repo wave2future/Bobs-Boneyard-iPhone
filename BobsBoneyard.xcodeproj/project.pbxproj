@@ -27,6 +27,13 @@
 		B582B98313D158FC003E4FD9 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B582B98113D158FB003E4FD9 /* TwitterViewController.xib */; };
 		B582B98713D170EF003E4FD9 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B98513D170EE003E4FD9 /* FacebookViewController.m */; };
 		B582B98813D170EF003E4FD9 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B582B98613D170EF003E4FD9 /* FacebookViewController.xib */; };
+		B582B9A213D23976003E4FD9 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B99B13D23976003E4FD9 /* MWFeedParser.m */; };
+		B582B9A313D23976003E4FD9 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B99E13D23976003E4FD9 /* MWFeedItem.m */; };
+		B582B9A413D23976003E4FD9 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9A013D23976003E4FD9 /* MWFeedInfo.m */; };
+		B582B9AC13D239C2003E4FD9 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9A813D239C2003E4FD9 /* NSString+HTML.m */; };
+		B582B9AD13D239C2003E4FD9 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AA13D239C2003E4FD9 /* NSDate+InternetDateTime.m */; };
+		B582B9B113D239E9003E4FD9 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AE13D239E9003E4FD9 /* GTMNSString+HTML.m */; };
+		B582B9B413D239F2003E4FD9 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +68,22 @@
 		B582B98413D170EE003E4FD9 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
 		B582B98513D170EE003E4FD9 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
 		B582B98613D170EF003E4FD9 /* FacebookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
+		B582B99B13D23976003E4FD9 /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		B582B99C13D23976003E4FD9 /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		B582B99D13D23976003E4FD9 /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		B582B99E13D23976003E4FD9 /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		B582B99F13D23976003E4FD9 /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		B582B9A013D23976003E4FD9 /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		B582B9A113D23976003E4FD9 /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		B582B9A813D239C2003E4FD9 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		B582B9A913D239C2003E4FD9 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		B582B9AA13D239C2003E4FD9 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		B582B9AB13D239C2003E4FD9 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		B582B9AE13D239E9003E4FD9 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		B582B9AF13D239E9003E4FD9 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		B582B9B013D239E9003E4FD9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		B582B9B313D239F2003E4FD9 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +130,8 @@
 		B519391C13CFF09D009840E5 /* BobsBoneyard */ = {
 			isa = PBXGroup;
 			children = (
+				B582B9A513D2397E003E4FD9 /* Categories */,
+				B582B99A13D23907003E4FD9 /* MWFeedParser */,
 				B582B97413D14FE5003E4FD9 /* Images */,
 				B519392513CFF09D009840E5 /* BobsBoneyardAppDelegate.h */,
 				B519392613CFF09D009840E5 /* BobsBoneyardAppDelegate.m */,
@@ -152,6 +177,52 @@
 				B582B97513D15079003E4FD9 /* logo_banner.jpeg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B582B99A13D23907003E4FD9 /* MWFeedParser */ = {
+			isa = PBXGroup;
+			children = (
+				B582B99B13D23976003E4FD9 /* MWFeedParser.m */,
+				B582B99C13D23976003E4FD9 /* MWFeedParser.h */,
+				B582B99D13D23976003E4FD9 /* MWFeedParser_Private.h */,
+				B582B99E13D23976003E4FD9 /* MWFeedItem.m */,
+				B582B99F13D23976003E4FD9 /* MWFeedItem.h */,
+				B582B9A013D23976003E4FD9 /* MWFeedInfo.m */,
+				B582B9A113D23976003E4FD9 /* MWFeedInfo.h */,
+			);
+			name = MWFeedParser;
+			sourceTree = "<group>";
+		};
+		B582B9A513D2397E003E4FD9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B582B9A813D239C2003E4FD9 /* NSString+HTML.m */,
+				B582B9A913D239C2003E4FD9 /* NSString+HTML.h */,
+				B582B9AA13D239C2003E4FD9 /* NSDate+InternetDateTime.m */,
+				B582B9AB13D239C2003E4FD9 /* NSDate+InternetDateTime.h */,
+				B582B9A713D23999003E4FD9 /* Depreciated */,
+				B582B9A613D2398C003E4FD9 /* Google Toobox for Mac */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		B582B9A613D2398C003E4FD9 /* Google Toobox for Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B582B9AE13D239E9003E4FD9 /* GTMNSString+HTML.m */,
+				B582B9AF13D239E9003E4FD9 /* GTMNSString+HTML.h */,
+				B582B9B013D239E9003E4FD9 /* GTMDefines.h */,
+			);
+			name = "Google Toobox for Mac";
+			sourceTree = "<group>";
+		};
+		B582B9A713D23999003E4FD9 /* Depreciated */ = {
+			isa = PBXGroup;
+			children = (
+				B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */,
+				B582B9B313D239F2003E4FD9 /* NSString+XMLEntities.h */,
+			);
+			name = Depreciated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +299,13 @@
 				B582B97213D141FE003E4FD9 /* EpisodesViewController.m in Sources */,
 				B582B98213D158FC003E4FD9 /* TwitterViewController.m in Sources */,
 				B582B98713D170EF003E4FD9 /* FacebookViewController.m in Sources */,
+				B582B9A213D23976003E4FD9 /* MWFeedParser.m in Sources */,
+				B582B9A313D23976003E4FD9 /* MWFeedItem.m in Sources */,
+				B582B9A413D23976003E4FD9 /* MWFeedInfo.m in Sources */,
+				B582B9AC13D239C2003E4FD9 /* NSString+HTML.m in Sources */,
+				B582B9AD13D239C2003E4FD9 /* NSDate+InternetDateTime.m in Sources */,
+				B582B9B113D239E9003E4FD9 /* GTMNSString+HTML.m in Sources */,
+				B582B9B413D239F2003E4FD9 /* NSString+XMLEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
