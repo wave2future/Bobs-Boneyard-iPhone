@@ -1,15 +1,15 @@
 //
-//  PodcastListViewController.m
+//  EpisodesViewController.m
 //  BobsBoneyard
 //
-//  Created by Ben on 7/14/11.
+//  Created by Ben on 7/15/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "PodcastListViewController.h"
+#import "EpisodesViewController.h"
 
 
-@implementation PodcastListViewController
+@implementation EpisodesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
