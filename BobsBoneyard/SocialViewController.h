@@ -10,7 +10,11 @@
 
 
 @interface SocialViewController : UIViewController {
-    
+    IBOutlet UIButton *twitterButton;
+    IBOutlet UIButton *facebookButton;
 }
+
+@property (nonatomic, retain) UIButton *twitterButton;
+@property (nonatomic, retain) UIButton *facebookButton;
 
 @end
