@@ -10,7 +10,13 @@
 
 
 @interface ContactViewController : UIViewController {
-    
+    IBOutlet UIButton *goodButton;
+    IBOutlet UIButton *badButton;
+    IBOutlet UIButton *mannyButton;
 }
+
+@property (nonatomic, retain) UIButton *goodButton;
+@property (nonatomic, retain) UIButton *badButton;
+@property (nonatomic, retain) UIButton *mannyButton;
 
 @end

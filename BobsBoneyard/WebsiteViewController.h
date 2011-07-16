@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface WebsiteViewController : UIViewController {
-    
+@interface WebsiteViewController : UIViewController {    
     IBOutlet UIWebView *website;
-    
 }
 
 @end
