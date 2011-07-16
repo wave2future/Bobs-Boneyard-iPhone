@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EpisodesViewController : UIViewController {
+@interface EpisodesViewController : UITableViewController {
     
 }
 
