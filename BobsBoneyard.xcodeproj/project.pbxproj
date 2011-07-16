@@ -22,10 +22,8 @@
 		B519394A13CFF14C009840E5 /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519394813CFF14C009840E5 /* ContactViewController.xib */; };
 		B519394E13CFF159009840E5 /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519394C13CFF159009840E5 /* WebsiteViewController.m */; };
 		B519394F13CFF159009840E5 /* WebsiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519394D13CFF159009840E5 /* WebsiteViewController.xib */; };
-		B519395313CFF181009840E5 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519395113CFF181009840E5 /* TwitterViewController.m */; };
-		B519395413CFF181009840E5 /* TwitterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519395213CFF181009840E5 /* TwitterViewController.xib */; };
-		B519395813CFF18E009840E5 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519395613CFF18E009840E5 /* FacebookViewController.m */; };
-		B519395913CFF18E009840E5 /* FacebookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B519395713CFF18E009840E5 /* FacebookViewController.xib */; };
+		B582B96D13D13EC2003E4FD9 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B96B13D13EC2003E4FD9 /* SocialViewController.m */; };
+		B582B96E13D13EC2003E4FD9 /* SocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B582B96C13D13EC2003E4FD9 /* SocialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +50,9 @@
 		B519394B13CFF159009840E5 /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
 		B519394C13CFF159009840E5 /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		B519394D13CFF159009840E5 /* WebsiteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebsiteViewController.xib; sourceTree = "<group>"; };
-		B519395013CFF181009840E5 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
-		B519395113CFF181009840E5 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
-		B519395213CFF181009840E5 /* TwitterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterViewController.xib; sourceTree = "<group>"; };
-		B519395513CFF18E009840E5 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
-		B519395613CFF18E009840E5 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
-		B519395713CFF18E009840E5 /* FacebookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookViewController.xib; sourceTree = "<group>"; };
+		B582B96A13D13EC2003E4FD9 /* SocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialViewController.h; sourceTree = "<group>"; };
+		B582B96B13D13EC2003E4FD9 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
+		B582B96C13D13EC2003E4FD9 /* SocialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +115,9 @@
 				B519394B13CFF159009840E5 /* WebsiteViewController.h */,
 				B519394C13CFF159009840E5 /* WebsiteViewController.m */,
 				B519394D13CFF159009840E5 /* WebsiteViewController.xib */,
-				B519395013CFF181009840E5 /* TwitterViewController.h */,
-				B519395113CFF181009840E5 /* TwitterViewController.m */,
-				B519395213CFF181009840E5 /* TwitterViewController.xib */,
-				B519395513CFF18E009840E5 /* FacebookViewController.h */,
-				B519395613CFF18E009840E5 /* FacebookViewController.m */,
-				B519395713CFF18E009840E5 /* FacebookViewController.xib */,
+				B582B96A13D13EC2003E4FD9 /* SocialViewController.h */,
+				B582B96B13D13EC2003E4FD9 /* SocialViewController.m */,
+				B582B96C13D13EC2003E4FD9 /* SocialViewController.xib */,
 			);
 			path = BobsBoneyard;
 			sourceTree = "<group>";
@@ -194,8 +186,7 @@
 				B519394513CFF136009840E5 /* PodcastListViewController.xib in Resources */,
 				B519394A13CFF14C009840E5 /* ContactViewController.xib in Resources */,
 				B519394F13CFF159009840E5 /* WebsiteViewController.xib in Resources */,
-				B519395413CFF181009840E5 /* TwitterViewController.xib in Resources */,
-				B519395913CFF18E009840E5 /* FacebookViewController.xib in Resources */,
+				B582B96E13D13EC2003E4FD9 /* SocialViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +203,7 @@
 				B519394413CFF136009840E5 /* PodcastListViewController.m in Sources */,
 				B519394913CFF14C009840E5 /* ContactViewController.m in Sources */,
 				B519394E13CFF159009840E5 /* WebsiteViewController.m in Sources */,
-				B519395313CFF181009840E5 /* TwitterViewController.m in Sources */,
-				B519395813CFF18E009840E5 /* FacebookViewController.m in Sources */,
+				B582B96D13D13EC2003E4FD9 /* SocialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +310,7 @@
 				B519393B13CFF09D009840E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
