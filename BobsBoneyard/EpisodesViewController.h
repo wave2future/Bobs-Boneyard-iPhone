@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
 
 
-@interface EpisodesViewController : UITableViewController {
+@interface EpisodesViewController : UITableViewController <MWFeedParserDelegate> {
     
 }
 
