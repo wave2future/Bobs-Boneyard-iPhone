@@ -7,9 +7,11 @@
 //
 
 #import "EpisodesViewController.h"
-
+#import "NSString+HTML.h"
 
 @implementation EpisodesViewController
+
+@synthesize itemsToDisplay;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,20 +42,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateStyle:NSDateFormatterShortStyle];
+	[formatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    parsedItems = [[NSMutableArray alloc] init];
+	self.itemsToDisplay = [NSArray array];
+    
     // Create feed parser and pass the URL of the feed
     NSURL *feedURL = [NSURL URLWithString:@"http://bobsboneyard.com/podcast/boneyard.xml"];
     MWFeedParser *feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
-    
-    // Delegate must conform to `MWFeedParserDelegate`
     feedParser.delegate = self;
-    
-    // Parse the feeds info (title, link) and all feed items
     feedParser.feedParseType = ParseTypeFull;
-    
-    // Connection type
     feedParser.connectionType = ConnectionTypeAsynchronously;
-    
-    // Begin parsing
     [feedParser parse];
 }
 
@@ -81,14 +82,17 @@
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
 	NSLog(@"Parsed Feed Item: “%@”", item.title);
-	//if (item) [parsedItems addObject:item];	
+    if (item) [parsedItems addObject:item];	
+    
+    //NSString *url = [[item.enclosures objectAtIndex:0] objectForKey:@"url"];
+    //NSString *type = [[item.enclosures objectAtIndex:0] objectForKey:@"type"];	
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
 	NSLog(@"Finished Parsing%@", (parser.stopped ? @" (Stopped)" : @""));
-//	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
-//						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
-//																				 ascending:NO] autorelease]]];
+	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
+						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
+																				 ascending:NO] autorelease]]];
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
@@ -97,11 +101,52 @@
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
 	NSLog(@"Finished Parsing With Error: %@", error);
 	self.title = @"Failed";
-//	self.itemsToDisplay = [NSArray array];
-//	[parsedItems removeAllObjects];
+	self.itemsToDisplay = [NSArray array];
+	[parsedItems removeAllObjects];
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
+}
+
+// Customize the number of sections in the table view.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return itemsToDisplay.count;
+}
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+	// Configure the cell.
+	MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
+	if (item) {
+		
+		// Process
+		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+		
+		// Set
+		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+		cell.textLabel.text = itemTitle;
+		NSMutableString *subtitle = [NSMutableString string];
+		if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
+		[subtitle appendString:itemSummary];
+		cell.detailTextLabel.text = subtitle;
+		
+	}
+    return cell;
 }
 
 @end

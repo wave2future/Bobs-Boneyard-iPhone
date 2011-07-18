@@ -11,7 +11,11 @@
 
 
 @interface EpisodesViewController : UITableViewController <MWFeedParserDelegate> {
-    
+    NSMutableArray *parsedItems;
+    NSDateFormatter *formatter;
 }
+
+// Properties
+@property (nonatomic, retain) NSArray *itemsToDisplay;
 
 @end
