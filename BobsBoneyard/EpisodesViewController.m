@@ -24,6 +24,9 @@
 
 - (void)dealloc
 {
+    [formatter release];
+	[parsedItems release];
+	[itemsToDisplay release];
     [super dealloc];
 }
 
