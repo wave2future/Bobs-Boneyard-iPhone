@@ -19,7 +19,6 @@
 		B519394E13CFF159009840E5 /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B519394C13CFF159009840E5 /* WebsiteViewController.m */; };
 		B582B96D13D13EC2003E4FD9 /* SocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B96B13D13EC2003E4FD9 /* SocialViewController.m */; };
 		B582B97213D141FE003E4FD9 /* EpisodesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B97013D141FE003E4FD9 /* EpisodesViewController.m */; };
-		B582B97313D141FE003E4FD9 /* EpisodesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B582B97113D141FE003E4FD9 /* EpisodesViewController.xib */; };
 		B582B97613D15079003E4FD9 /* logo_banner.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B582B97513D15079003E4FD9 /* logo_banner.jpeg */; };
 		B582B97C13D15502003E4FD9 /* logo_facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B582B97A13D15502003E4FD9 /* logo_facebook.jpg */; };
 		B582B97E13D15840003E4FD9 /* logo_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = B582B97D13D15840003E4FD9 /* logo_twitter.png */; };
@@ -58,7 +57,6 @@
 		B582B96B13D13EC2003E4FD9 /* SocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialViewController.m; sourceTree = "<group>"; };
 		B582B96F13D141FE003E4FD9 /* EpisodesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodesViewController.h; sourceTree = "<group>"; };
 		B582B97013D141FE003E4FD9 /* EpisodesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodesViewController.m; sourceTree = "<group>"; };
-		B582B97113D141FE003E4FD9 /* EpisodesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodesViewController.xib; sourceTree = "<group>"; };
 		B582B97513D15079003E4FD9 /* logo_banner.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_banner.jpeg; sourceTree = "<group>"; };
 		B582B97A13D15502003E4FD9 /* logo_facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_facebook.jpg; sourceTree = "<group>"; };
 		B582B97D13D15840003E4FD9 /* logo_twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_twitter.png; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 				B582B96B13D13EC2003E4FD9 /* SocialViewController.m */,
 				B582B96F13D141FE003E4FD9 /* EpisodesViewController.h */,
 				B582B97013D141FE003E4FD9 /* EpisodesViewController.m */,
-				B582B97113D141FE003E4FD9 /* EpisodesViewController.xib */,
 				B582B97F13D158FB003E4FD9 /* TwitterViewController.h */,
 				B582B98013D158FB003E4FD9 /* TwitterViewController.m */,
 				B582B98113D158FB003E4FD9 /* TwitterViewController.xib */,
@@ -274,7 +271,6 @@
 			files = (
 				B519392113CFF09D009840E5 /* InfoPlist.strings in Resources */,
 				B519392A13CFF09D009840E5 /* MainWindow.xib in Resources */,
-				B582B97313D141FE003E4FD9 /* EpisodesViewController.xib in Resources */,
 				B582B97613D15079003E4FD9 /* logo_banner.jpeg in Resources */,
 				B582B97C13D15502003E4FD9 /* logo_facebook.jpg in Resources */,
 				B582B97E13D15840003E4FD9 /* logo_twitter.png in Resources */,

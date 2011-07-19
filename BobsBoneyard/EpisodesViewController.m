@@ -27,6 +27,7 @@
     [formatter release];
 	[parsedItems release];
 	[itemsToDisplay release];
+    [feedParser release];
     [super dealloc];
 }
 
@@ -52,13 +53,28 @@
     parsedItems = [[NSMutableArray alloc] init];
 	self.itemsToDisplay = [NSArray array];
     
+    // Refresh button
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+        target:self 
+        action:@selector(refresh)] autorelease];
+    
     // Create feed parser and pass the URL of the feed
     NSURL *feedURL = [NSURL URLWithString:@"http://bobsboneyard.com/podcast/boneyard.xml"];
-    MWFeedParser *feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
+    feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
     feedParser.delegate = self;
     feedParser.feedParseType = ParseTypeFull;
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
+}
+
+// Reset and reparse
+- (void)refresh {
+	self.title = @"Refreshing...";
+	[parsedItems removeAllObjects];
+	[feedParser stopParsing];
+	[feedParser parse];
+	self.tableView.userInteractionEnabled = NO;
+	self.tableView.alpha = 0.3;
 }
 
 - (void)viewDidUnload
@@ -94,6 +110,7 @@
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
 	NSLog(@"Finished Parsing%@", (parser.stopped ? @" (Stopped)" : @""));
+    self.title = @"Episodes";
 	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
 						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
 																				 ascending:NO] autorelease]]];
