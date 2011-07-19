@@ -127,18 +127,23 @@
 	// Configure the cell.
 	MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
 	if (item) {
-		
-		// Process
-		NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
-		NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
-		
-		// Set
-		cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+        NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+        NSMutableString *subtitle = [NSMutableString string];
+        NSArray *titleParts = [itemTitle componentsSeparatedByString: @" -- "]; 
+        
+        if([titleParts count] == 2)
+        {
+            itemTitle = [titleParts objectAtIndex:1];
+            [subtitle appendString:[titleParts objectAtIndex:0]];
+        }
+        
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
 		cell.textLabel.text = itemTitle;
-		NSMutableString *subtitle = [NSMutableString string];
-		if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
-		[subtitle appendString:itemSummary];
-		cell.detailTextLabel.text = subtitle;
+        cell.detailTextLabel.text = subtitle;
+		
+		//NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+		//if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
+		//[subtitle appendString:itemSummary];
 		
 	}
     return cell;
