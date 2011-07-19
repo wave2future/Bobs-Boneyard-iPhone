@@ -77,15 +77,11 @@
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info {
 	NSLog(@"Parsed Feed Info: “%@”", info.title);
-	self.title = info.title;
 }
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
 	NSLog(@"Parsed Feed Item: “%@”", item.title);
-    if (item) [parsedItems addObject:item];	
-    
-    //NSString *url = [[item.enclosures objectAtIndex:0] objectForKey:@"url"];
-    //NSString *type = [[item.enclosures objectAtIndex:0] objectForKey:@"type"];	
+    if (item) [parsedItems addObject:item];		
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
@@ -100,7 +96,6 @@
 
 - (void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error {
 	NSLog(@"Finished Parsing With Error: %@", error);
-	self.title = @"Failed";
 	self.itemsToDisplay = [NSArray array];
 	[parsedItems removeAllObjects];
 	self.tableView.userInteractionEnabled = YES;
