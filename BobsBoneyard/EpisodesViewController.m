@@ -81,7 +81,12 @@
 
 - (void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item {
 	NSLog(@"Parsed Feed Item: “%@”", item.title);
-    if (item) [parsedItems addObject:item];		
+    if (item && [item.enclosures count] == 1)
+    {
+        NSString* type = [[item.enclosures objectAtIndex:0] objectForKey:@"type"];
+        if([type isEqualToString:@"audio/mp3"])                  
+            [parsedItems addObject:item];		
+    }
 }
 
 - (void)feedParserDidFinish:(MWFeedParser *)parser {
