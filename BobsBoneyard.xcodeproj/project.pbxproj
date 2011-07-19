@@ -140,25 +140,7 @@
 				B519392613CFF09D009840E5 /* BobsBoneyardAppDelegate.m */,
 				B519392813CFF09D009840E5 /* MainWindow.xib */,
 				B519391D13CFF09D009840E5 /* Supporting Files */,
-				B519393C13CFF114009840E5 /* StreamingViewController.h */,
-				B519393D13CFF114009840E5 /* StreamingViewController.m */,
-				B519394613CFF14C009840E5 /* ContactViewController.h */,
-				B519394713CFF14C009840E5 /* ContactViewController.m */,
-				B519394B13CFF159009840E5 /* WebsiteViewController.h */,
-				B519394C13CFF159009840E5 /* WebsiteViewController.m */,
-				B582B96A13D13EC2003E4FD9 /* SocialViewController.h */,
-				B582B96B13D13EC2003E4FD9 /* SocialViewController.m */,
-				B582B96F13D141FE003E4FD9 /* EpisodesViewController.h */,
-				B582B97013D141FE003E4FD9 /* EpisodesViewController.m */,
-				B582B97F13D158FB003E4FD9 /* TwitterViewController.h */,
-				B582B98013D158FB003E4FD9 /* TwitterViewController.m */,
-				B582B98113D158FB003E4FD9 /* TwitterViewController.xib */,
-				B582B98413D170EE003E4FD9 /* FacebookViewController.h */,
-				B582B98513D170EE003E4FD9 /* FacebookViewController.m */,
-				B582B98613D170EF003E4FD9 /* FacebookViewController.xib */,
-				B54D6CBD13D62DF200F3956C /* EpisodeDetailViewController.h */,
-				B54D6CBE13D62DF200F3956C /* EpisodeDetailViewController.m */,
-				B54D6CBF13D62DF200F3956C /* EpisodeDetailViewController.xib */,
+				B54D6CCA13D632A500F3956C /* Views */,
 			);
 			path = BobsBoneyard;
 			sourceTree = "<group>";
@@ -172,6 +154,88 @@
 				B519392313CFF09D009840E5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B54D6CC313D6319B00F3956C /* StreamingView */ = {
+			isa = PBXGroup;
+			children = (
+				B519393C13CFF114009840E5 /* StreamingViewController.h */,
+				B519393D13CFF114009840E5 /* StreamingViewController.m */,
+			);
+			name = StreamingView;
+			sourceTree = "<group>";
+		};
+		B54D6CC413D631B400F3956C /* ContactView */ = {
+			isa = PBXGroup;
+			children = (
+				B519394613CFF14C009840E5 /* ContactViewController.h */,
+				B519394713CFF14C009840E5 /* ContactViewController.m */,
+			);
+			name = ContactView;
+			sourceTree = "<group>";
+		};
+		B54D6CC513D631CB00F3956C /* WebsiteView */ = {
+			isa = PBXGroup;
+			children = (
+				B519394B13CFF159009840E5 /* WebsiteViewController.h */,
+				B519394C13CFF159009840E5 /* WebsiteViewController.m */,
+			);
+			name = WebsiteView;
+			sourceTree = "<group>";
+		};
+		B54D6CC613D6323900F3956C /* SocialView */ = {
+			isa = PBXGroup;
+			children = (
+				B582B96A13D13EC2003E4FD9 /* SocialViewController.h */,
+				B582B96B13D13EC2003E4FD9 /* SocialViewController.m */,
+				B54D6CC913D6326600F3956C /* Facebook */,
+				B54D6CC713D6324C00F3956C /* Twitter */,
+			);
+			name = SocialView;
+			sourceTree = "<group>";
+		};
+		B54D6CC713D6324C00F3956C /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				B582B97F13D158FB003E4FD9 /* TwitterViewController.h */,
+				B582B98013D158FB003E4FD9 /* TwitterViewController.m */,
+				B582B98113D158FB003E4FD9 /* TwitterViewController.xib */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		B54D6CC813D6325500F3956C /* EpisodesView */ = {
+			isa = PBXGroup;
+			children = (
+				B582B96F13D141FE003E4FD9 /* EpisodesViewController.h */,
+				B582B97013D141FE003E4FD9 /* EpisodesViewController.m */,
+				B54D6CBD13D62DF200F3956C /* EpisodeDetailViewController.h */,
+				B54D6CBE13D62DF200F3956C /* EpisodeDetailViewController.m */,
+				B54D6CBF13D62DF200F3956C /* EpisodeDetailViewController.xib */,
+			);
+			name = EpisodesView;
+			sourceTree = "<group>";
+		};
+		B54D6CC913D6326600F3956C /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				B582B98413D170EE003E4FD9 /* FacebookViewController.h */,
+				B582B98513D170EE003E4FD9 /* FacebookViewController.m */,
+				B582B98613D170EF003E4FD9 /* FacebookViewController.xib */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		B54D6CCA13D632A500F3956C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B54D6CC413D631B400F3956C /* ContactView */,
+				B54D6CC813D6325500F3956C /* EpisodesView */,
+				B54D6CC613D6323900F3956C /* SocialView */,
+				B54D6CC313D6319B00F3956C /* StreamingView */,
+				B54D6CC513D631CB00F3956C /* WebsiteView */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B582B97413D14FE5003E4FD9 /* Images */ = {
