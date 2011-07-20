@@ -39,6 +39,10 @@
 		B5ED5B8B13D780D5003113A0 /* mailclosed.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B8A13D780D5003113A0 /* mailclosed.png */; };
 		B5ED5B8E13D780FC003113A0 /* speechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B8C13D780FC003113A0 /* speechbubble.png */; };
 		B5ED5B8F13D780FC003113A0 /* world.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B8D13D780FC003113A0 /* world.png */; };
+		B5ED5B9513D78276003113A0 /* iphone_icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9413D78276003113A0 /* iphone_icon_retina.png */; };
+		B5ED5B9713D782BC003113A0 /* iphone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9613D782BC003113A0 /* iphone_icon.png */; };
+		B5ED5B9A13D7838F003113A0 /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9813D7838F003113A0 /* newspaper.png */; };
+		B5ED5B9B13D7838F003113A0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9913D7838F003113A0 /* play.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		B5ED5B8A13D780D5003113A0 /* mailclosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mailclosed.png; sourceTree = "<group>"; };
 		B5ED5B8C13D780FC003113A0 /* speechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speechbubble.png; sourceTree = "<group>"; };
 		B5ED5B8D13D780FC003113A0 /* world.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world.png; sourceTree = "<group>"; };
+		B5ED5B9413D78276003113A0 /* iphone_icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon_retina.png; sourceTree = "<group>"; };
+		B5ED5B9613D782BC003113A0 /* iphone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_icon.png; sourceTree = "<group>"; };
+		B5ED5B9813D7838F003113A0 /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper.png; sourceTree = "<group>"; };
+		B5ED5B9913D7838F003113A0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,8 @@
 		B519390713CFF09D009840E5 = {
 			isa = PBXGroup;
 			children = (
+				B5ED5B9613D782BC003113A0 /* iphone_icon.png */,
+				B5ED5B9413D78276003113A0 /* iphone_icon_retina.png */,
 				B519391C13CFF09D009840E5 /* BobsBoneyard */,
 				B519391513CFF09D009840E5 /* Frameworks */,
 				B519391313CFF09D009840E5 /* Products */,
@@ -249,6 +259,8 @@
 		B582B97413D14FE5003E4FD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5ED5B9813D7838F003113A0 /* newspaper.png */,
+				B5ED5B9913D7838F003113A0 /* play.png */,
 				B5ED5B8C13D780FC003113A0 /* speechbubble.png */,
 				B5ED5B8D13D780FC003113A0 /* world.png */,
 				B5ED5B8A13D780D5003113A0 /* mailclosed.png */,
@@ -365,6 +377,10 @@
 				B5ED5B8B13D780D5003113A0 /* mailclosed.png in Resources */,
 				B5ED5B8E13D780FC003113A0 /* speechbubble.png in Resources */,
 				B5ED5B8F13D780FC003113A0 /* world.png in Resources */,
+				B5ED5B9513D78276003113A0 /* iphone_icon_retina.png in Resources */,
+				B5ED5B9713D782BC003113A0 /* iphone_icon.png in Resources */,
+				B5ED5B9A13D7838F003113A0 /* newspaper.png in Resources */,
+				B5ED5B9B13D7838F003113A0 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
