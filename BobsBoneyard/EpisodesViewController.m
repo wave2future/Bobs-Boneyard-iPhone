@@ -7,6 +7,7 @@
 //
 
 #import "EpisodesViewController.h"
+#import "EpisodeDetailViewController.h"
 #import "NSString+HTML.h"
 
 @implementation EpisodesViewController
@@ -172,6 +173,19 @@
 		
 	}
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+	// Show detail
+	EpisodeDetailViewController *detail = [[EpisodeDetailViewController alloc] initWithNibName:@"EpisodeDetailViewController" bundle:NULL];
+	detail.episodeDetails = (MWFeedItem *)[itemsToDisplay objectAtIndex:indexPath.row];
+	[self.navigationController pushViewController:detail animated:YES];
+	[detail release];
+	
+	// Deselect
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
 }
 
 @end

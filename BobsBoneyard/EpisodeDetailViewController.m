@@ -7,9 +7,15 @@
 //
 
 #import "EpisodeDetailViewController.h"
-
+#import "NSString+HTML.h"
 
 @implementation EpisodeDetailViewController
+
+@synthesize titleLabel;
+@synthesize subtitleLabel;
+@synthesize dateLabel;
+@synthesize summaryLabel;
+@synthesize episodeDetails;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +28,11 @@
 
 - (void)dealloc
 {
+    [titleLabel release];
+    [subtitleLabel release];
+    [dateLabel release];
+    [summaryLabel release];
+    [episodeDetails release];
     [super dealloc];
 }
 
@@ -39,10 +50,46 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    if (episodeDetails)
+    {
+        if(episodeDetails.title)
+        {
+            NSString *itemTitle = episodeDetails.title ? [episodeDetails.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+            NSArray *titleParts = [itemTitle componentsSeparatedByString: @" -- "]; 
+            
+            if([titleParts count] == 2)
+            {
+                NSString *curTitle = [titleParts objectAtIndex:1];
+                NSString *curSubtitle = [titleParts objectAtIndex:0];
+                
+                self.titleLabel.text = curTitle;
+                self.subtitleLabel.text = curSubtitle;
+                self.title = [curSubtitle stringByReplacingOccurrencesOfString:@"Bob's Boneyard " withString:@""];
+            }
+        }
+        
+        // Date
+        if (episodeDetails.date) {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateStyle:NSDateFormatterMediumStyle];
+            [formatter setTimeStyle:NSDateFormatterNoStyle];
+            self.dateLabel.text = [formatter stringFromDate:episodeDetails.date];
+            [formatter release];
+        }
+        
+        // Summary
+        if (episodeDetails.summary) {
+            self.summaryLabel.text = [episodeDetails.summary stringByConvertingHTMLToPlainText];
+        }
+    }
 }
 
 - (void)viewDidUnload
 {
+    [self setTitleLabel:nil];
+    [self setSubtitleLabel:nil];
+    [self setDateLabel:nil];
+    [self setSummaryLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -54,4 +101,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)stream:(id)sender {
+}
 @end

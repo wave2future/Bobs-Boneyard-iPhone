@@ -35,6 +35,7 @@
 		B582B9AD13D239C2003E4FD9 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AA13D239C2003E4FD9 /* NSDate+InternetDateTime.m */; };
 		B582B9B113D239E9003E4FD9 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AE13D239E9003E4FD9 /* GTMNSString+HTML.m */; };
 		B582B9B413D239F2003E4FD9 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */; };
+		B5ED5B8013D66A91003113A0 /* SummaryBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B7F13D66A91003113A0 /* SummaryBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		B582B9B013D239E9003E4FD9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 		B582B9B313D239F2003E4FD9 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		B5ED5B7F13D66A91003113A0 /* SummaryBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SummaryBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		B582B97413D14FE5003E4FD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5ED5B7F13D66A91003113A0 /* SummaryBackground.png */,
 				B582B97D13D15840003E4FD9 /* logo_twitter.png */,
 				B582B97A13D15502003E4FD9 /* logo_facebook.jpg */,
 				B582B97513D15079003E4FD9 /* logo_banner.jpeg */,
@@ -349,6 +352,7 @@
 				B582B98313D158FC003E4FD9 /* TwitterViewController.xib in Resources */,
 				B582B98813D170EF003E4FD9 /* FacebookViewController.xib in Resources */,
 				B54D6CC113D62DF200F3956C /* EpisodeDetailViewController.xib in Resources */,
+				B5ED5B8013D66A91003113A0 /* SummaryBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
