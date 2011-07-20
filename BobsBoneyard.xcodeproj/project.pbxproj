@@ -45,6 +45,8 @@
 		B5ED5B9B13D7838F003113A0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9913D7838F003113A0 /* play.png */; };
 		B5ED5B9D13D785D1003113A0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9C13D785D1003113A0 /* Default.png */; };
 		B5ED5BA113D7870F003113A0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA013D7870F003113A0 /* Default@2x.png */; };
+		B5ED5BA413D79288003113A0 /* stopBBY.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA213D79288003113A0 /* stopBBY.png */; };
+		B5ED5BA513D79288003113A0 /* playbby.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA313D79288003113A0 /* playbby.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		B5ED5B9913D7838F003113A0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		B5ED5B9C13D785D1003113A0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B5ED5BA013D7870F003113A0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B5ED5BA213D79288003113A0 /* stopBBY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopBBY.png; sourceTree = "<group>"; };
+		B5ED5BA313D79288003113A0 /* playbby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbby.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,8 @@
 		B582B97413D14FE5003E4FD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5ED5BA213D79288003113A0 /* stopBBY.png */,
+				B5ED5BA313D79288003113A0 /* playbby.png */,
 				B5ED5B9813D7838F003113A0 /* newspaper.png */,
 				B5ED5B9913D7838F003113A0 /* play.png */,
 				B5ED5B8C13D780FC003113A0 /* speechbubble.png */,
@@ -389,6 +395,8 @@
 				B5ED5B9B13D7838F003113A0 /* play.png in Resources */,
 				B5ED5B9D13D785D1003113A0 /* Default.png in Resources */,
 				B5ED5BA113D7870F003113A0 /* Default@2x.png in Resources */,
+				B5ED5BA413D79288003113A0 /* stopBBY.png in Resources */,
+				B5ED5BA513D79288003113A0 /* playbby.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
