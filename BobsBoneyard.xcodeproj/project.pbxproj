@@ -35,6 +35,8 @@
 		B582B9AD13D239C2003E4FD9 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AA13D239C2003E4FD9 /* NSDate+InternetDateTime.m */; };
 		B582B9B113D239E9003E4FD9 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9AE13D239E9003E4FD9 /* GTMNSString+HTML.m */; };
 		B582B9B413D239F2003E4FD9 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */; };
+		B5CA1A4413D7B6F2007707F1 /* playbby.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CA1A4313D7B6F2007707F1 /* playbby.png */; };
+		B5CA1A4613D7B775007707F1 /* stopBBY.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CA1A4513D7B775007707F1 /* stopBBY.png */; };
 		B5ED5B8013D66A91003113A0 /* SummaryBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B7F13D66A91003113A0 /* SummaryBackground.png */; };
 		B5ED5B8B13D780D5003113A0 /* mailclosed.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B8A13D780D5003113A0 /* mailclosed.png */; };
 		B5ED5B8E13D780FC003113A0 /* speechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B8C13D780FC003113A0 /* speechbubble.png */; };
@@ -45,8 +47,6 @@
 		B5ED5B9B13D7838F003113A0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9913D7838F003113A0 /* play.png */; };
 		B5ED5B9D13D785D1003113A0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5B9C13D785D1003113A0 /* Default.png */; };
 		B5ED5BA113D7870F003113A0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA013D7870F003113A0 /* Default@2x.png */; };
-		B5ED5BA413D79288003113A0 /* stopBBY.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA213D79288003113A0 /* stopBBY.png */; };
-		B5ED5BA513D79288003113A0 /* playbby.png in Resources */ = {isa = PBXBuildFile; fileRef = B5ED5BA313D79288003113A0 /* playbby.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +99,8 @@
 		B582B9B013D239E9003E4FD9 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		B582B9B213D239F2003E4FD9 /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
 		B582B9B313D239F2003E4FD9 /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		B5CA1A4313D7B6F2007707F1 /* playbby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbby.png; sourceTree = "<group>"; };
+		B5CA1A4513D7B775007707F1 /* stopBBY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopBBY.png; sourceTree = "<group>"; };
 		B5ED5B7F13D66A91003113A0 /* SummaryBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SummaryBackground.png; sourceTree = "<group>"; };
 		B5ED5B8A13D780D5003113A0 /* mailclosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mailclosed.png; sourceTree = "<group>"; };
 		B5ED5B8C13D780FC003113A0 /* speechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speechbubble.png; sourceTree = "<group>"; };
@@ -109,8 +111,6 @@
 		B5ED5B9913D7838F003113A0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		B5ED5B9C13D785D1003113A0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B5ED5BA013D7870F003113A0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B5ED5BA213D79288003113A0 /* stopBBY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopBBY.png; sourceTree = "<group>"; };
-		B5ED5BA313D79288003113A0 /* playbby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbby.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,8 +269,8 @@
 		B582B97413D14FE5003E4FD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B5ED5BA213D79288003113A0 /* stopBBY.png */,
-				B5ED5BA313D79288003113A0 /* playbby.png */,
+				B5CA1A4313D7B6F2007707F1 /* playbby.png */,
+				B5CA1A4513D7B775007707F1 /* stopBBY.png */,
 				B5ED5B9813D7838F003113A0 /* newspaper.png */,
 				B5ED5B9913D7838F003113A0 /* play.png */,
 				B5ED5B8C13D780FC003113A0 /* speechbubble.png */,
@@ -395,8 +395,8 @@
 				B5ED5B9B13D7838F003113A0 /* play.png in Resources */,
 				B5ED5B9D13D785D1003113A0 /* Default.png in Resources */,
 				B5ED5BA113D7870F003113A0 /* Default@2x.png in Resources */,
-				B5ED5BA413D79288003113A0 /* stopBBY.png in Resources */,
-				B5ED5BA513D79288003113A0 /* playbby.png in Resources */,
+				B5CA1A4413D7B6F2007707F1 /* playbby.png in Resources */,
+				B5CA1A4613D7B775007707F1 /* stopBBY.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
