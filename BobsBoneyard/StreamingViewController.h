@@ -10,7 +10,11 @@
 
 
 @interface StreamingViewController : UIViewController {
-    
+    UILabel *titleLabel;
+    UILabel *subtitleLabel;
+    UITextView *summaryLabel;
 }
-
+@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
+@property (nonatomic, retain) IBOutlet UILabel *subtitleLabel;
+@property (nonatomic, retain) IBOutlet UITextView *summaryLabel;
 @end

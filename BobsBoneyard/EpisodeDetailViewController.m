@@ -7,6 +7,7 @@
 //
 
 #import "EpisodeDetailViewController.h"
+#import "StreamingViewController.h"
 #import "NSString+HTML.h"
 
 @implementation EpisodeDetailViewController
@@ -102,10 +103,18 @@
 }
 
 - (IBAction)stream:(id)sender {
+    // Declare the controllers we need to use
     UINavigationController *navController = (UINavigationController*)[self parentViewController];
     UITabBarController *tabBarController = (UITabBarController*)[navController parentViewController];
+    StreamingViewController *streamingViewController = (StreamingViewController*)[[tabBarController viewControllers] objectAtIndex:0];
     
+    // Set the content of the streaming view
+    streamingViewController.titleLabel.text = self.titleLabel.text;
+    streamingViewController.subtitleLabel.text = self.subtitleLabel.text;
+    streamingViewController.summaryLabel.text = self.summaryLabel.text;
+    
+    // Go back to the list of podcasts then set the tab to show the streaming view
     [navController popViewControllerAnimated:FALSE];
-    [tabBarController setSelectedViewController:[[tabBarController viewControllers] objectAtIndex:0]];
+    [tabBarController setSelectedViewController:streamingViewController];
 }
 @end
