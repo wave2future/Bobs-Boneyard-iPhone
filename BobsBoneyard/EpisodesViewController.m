@@ -8,6 +8,7 @@
 
 #import "EpisodesViewController.h"
 #import "EpisodeDetailViewController.h"
+#import "StreamingViewController.h"
 #import "NSString+HTML.h"
 
 @implementation EpisodesViewController
@@ -115,6 +116,38 @@
 	self.itemsToDisplay = [parsedItems sortedArrayUsingDescriptors:
 						   [NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"date" 
 																				 ascending:NO] autorelease]]];
+    
+    // Now that we have all the items, let's set the newest one in the streaming view
+    // Declare the controllers we need to use
+    UINavigationController *navController = (UINavigationController*)[self parentViewController];
+    UITabBarController *tabBarController = (UITabBarController*)[navController parentViewController];
+    StreamingViewController *streamingViewController = (StreamingViewController*)[[tabBarController viewControllers] objectAtIndex:0];
+    
+    // Get the item to set
+    MWFeedItem *item = [self.itemsToDisplay objectAtIndex:0];
+    if(item)
+    {
+        if(item.title)
+        {
+            NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+            NSArray *titleParts = [itemTitle componentsSeparatedByString: @" -- "]; 
+            
+            if([titleParts count] == 2)
+            {
+                NSString *curTitle = [titleParts objectAtIndex:1];
+                NSString *curSubtitle = [titleParts objectAtIndex:0];
+                
+                streamingViewController.titleLabel.text = curTitle;
+                streamingViewController.subtitleLabel.text = curSubtitle;
+            }
+        }
+        
+        if (item.summary)
+        {
+            streamingViewController.summaryLabel.text = [item.summary stringByConvertingHTMLToPlainText];
+        }
+    }
+    
 	self.tableView.userInteractionEnabled = YES;
 	self.tableView.alpha = 1;
 	[self.tableView reloadData];
