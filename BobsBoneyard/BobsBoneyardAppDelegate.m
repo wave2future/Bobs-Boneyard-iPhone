@@ -84,7 +84,4 @@
 }
 */
 
-- (IBAction)twitterButtonClicked {
-    
-}
 @end

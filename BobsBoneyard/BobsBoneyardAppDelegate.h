@@ -11,7 +11,6 @@
 @interface BobsBoneyardAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 
 }
-- (IBAction)twitterButtonClicked;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
