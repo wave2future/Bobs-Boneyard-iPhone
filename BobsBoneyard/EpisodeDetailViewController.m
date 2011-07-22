@@ -102,5 +102,10 @@
 }
 
 - (IBAction)stream:(id)sender {
+    UINavigationController *navController = (UINavigationController*)[self parentViewController];
+    UITabBarController *tabBarController = (UITabBarController*)[navController parentViewController];
+    
+    [navController popViewControllerAnimated:FALSE];
+    [tabBarController setSelectedViewController:[[tabBarController viewControllers] objectAtIndex:0]];
 }
 @end
