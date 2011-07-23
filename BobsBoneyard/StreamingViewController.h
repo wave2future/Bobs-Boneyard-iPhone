@@ -16,6 +16,9 @@
     NSString *podcastUrl;
     
     AVPlayer *audioPlayer;
+    Boolean audioPlaying;
+    UIImage *playButton;
+    UIImage *stopButton;
     
     IBOutlet UIButton *playStopButton;
 }

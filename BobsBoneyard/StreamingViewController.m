@@ -27,6 +27,18 @@
 
 - (void)dealloc
 {
+    [titleLabel release];
+    [subtitleLabel release];
+    [summaryLabel release];
+    [podcastUrl release];
+    
+    [audioPlayer release];
+    
+    [playButton release];
+    [stopButton release];
+    
+    [playStopButton release];
+    
     [super dealloc];
 }
 
@@ -45,7 +57,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchDown];
+    playButton = [UIImage imageNamed: @"playbby.png"];
+    stopButton = [UIImage imageNamed: @"stopBBY.png"];
+    [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    audioPlaying = FALSE;
 }
 
 - (void)viewDidUnload
@@ -64,8 +79,26 @@
 - (void)playStopButtonClick:(id)sender {
     NSLog(@"%@", podcastUrl);
     
-    audioPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:podcastUrl]];
-    [audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+    if (audioPlayer)
+    {
+        if (audioPlaying)
+        {
+            [audioPlayer pause];
+            [playStopButton setImage:playButton forState:UIControlStateNormal];            
+            audioPlaying = FALSE;
+        }
+        else
+        {
+            [audioPlayer play];
+            [playStopButton setImage:stopButton forState:UIControlStateNormal];
+            audioPlaying = TRUE;
+        }
+    }
+    else
+    {
+        audioPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:podcastUrl]];
+        [audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+    }
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -73,6 +106,8 @@
     if(object == audioPlayer && [keyPath isEqualToString:@"status"])
     {
         [audioPlayer play];
+        [playStopButton setImage:stopButton forState:UIControlStateNormal];
+        audioPlaying = TRUE;
     }
 }
 
