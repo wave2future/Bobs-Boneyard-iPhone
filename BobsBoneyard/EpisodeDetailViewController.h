@@ -15,6 +15,7 @@
     UILabel *subtitleLabel;
     UILabel *dateLabel;
     UITextView *summaryLabel;
+    
 }
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, retain) IBOutlet UILabel *subtitleLabel;

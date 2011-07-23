@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B504699513DA7B4500F41F32 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504699413DA7B4500F41F32 /* AVFoundation.framework */; };
 		B519391713CFF09D009840E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391613CFF09D009840E5 /* UIKit.framework */; };
 		B519391913CFF09D009840E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391813CFF09D009840E5 /* Foundation.framework */; };
 		B519391B13CFF09D009840E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519391A13CFF09D009840E5 /* CoreGraphics.framework */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B504699413DA7B4500F41F32 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B519391213CFF09D009840E5 /* BobsBoneyard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobsBoneyard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B519391613CFF09D009840E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B519391813CFF09D009840E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B504699513DA7B4500F41F32 /* AVFoundation.framework in Frameworks */,
 				B519391713CFF09D009840E5 /* UIKit.framework in Frameworks */,
 				B519391913CFF09D009840E5 /* Foundation.framework in Frameworks */,
 				B519391B13CFF09D009840E5 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +133,7 @@
 		B519390713CFF09D009840E5 = {
 			isa = PBXGroup;
 			children = (
+				B504699413DA7B4500F41F32 /* AVFoundation.framework */,
 				B5ED5BA013D7870F003113A0 /* Default@2x.png */,
 				B5ED5B9C13D785D1003113A0 /* Default.png */,
 				B5ED5B9613D782BC003113A0 /* iphone_icon.png */,

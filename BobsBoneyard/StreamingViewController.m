@@ -8,12 +8,13 @@
 
 #import "StreamingViewController.h"
 
-
 @implementation StreamingViewController
 
 @synthesize titleLabel;
 @synthesize subtitleLabel;
 @synthesize summaryLabel;
+@synthesize podcastUrl;
+@synthesize playStopButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +44,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchDown];
 }
 
 - (void)viewDidUnload
@@ -56,6 +59,21 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)playStopButtonClick:(id)sender {
+    NSLog(@"%@", podcastUrl);
+    
+    audioPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:podcastUrl]];
+    [audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if(object == audioPlayer && [keyPath isEqualToString:@"status"])
+    {
+        [audioPlayer play];
+    }
 }
 
 @end

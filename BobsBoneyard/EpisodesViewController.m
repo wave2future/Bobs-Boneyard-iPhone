@@ -143,9 +143,9 @@
         }
         
         if (item.summary)
-        {
             streamingViewController.summaryLabel.text = [item.summary stringByConvertingHTMLToPlainText];
-        }
+        
+        streamingViewController.podcastUrl = [[item.enclosures objectAtIndex:0] objectForKey:@"url"];
     }
     
 	self.tableView.userInteractionEnabled = YES;

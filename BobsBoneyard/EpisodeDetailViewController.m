@@ -112,6 +112,7 @@
     streamingViewController.titleLabel.text = self.titleLabel.text;
     streamingViewController.subtitleLabel.text = self.subtitleLabel.text;
     streamingViewController.summaryLabel.text = self.summaryLabel.text;
+    streamingViewController.podcastUrl = [[episodeDetails.enclosures objectAtIndex:0] objectForKey:@"url"];
     
     // Go back to the list of podcasts then set the tab to show the streaming view
     [navController popViewControllerAnimated:FALSE];
