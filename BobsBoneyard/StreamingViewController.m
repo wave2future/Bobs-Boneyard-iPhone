@@ -34,9 +34,6 @@
     
     [audioPlayer release];
     
-    [playButton release];
-    [stopButton release];
-    
     [playStopButton release];
     
     [super dealloc];
@@ -57,8 +54,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    playButton = [UIImage imageNamed: @"playbby.png"];
-    stopButton = [UIImage imageNamed: @"stopBBY.png"];
     [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     audioPlaying = FALSE;
 }
@@ -83,21 +78,16 @@
     {
         if (audioPlaying)
         {
-            [audioPlayer pause];
-            [playStopButton setImage:playButton forState:UIControlStateNormal];            
-            audioPlaying = FALSE;
+            [self stopPlayingAudio];
         }
         else
         {
-            [audioPlayer play];
-            [playStopButton setImage:stopButton forState:UIControlStateNormal];
-            audioPlaying = TRUE;
+            [self startPlayingAudio];
         }
     }
     else
     {
-        audioPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:podcastUrl]];
-        [audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+        [self initAndStartPlayingAudio];
     }
 }
 
@@ -105,10 +95,36 @@
 {
     if(object == audioPlayer && [keyPath isEqualToString:@"status"])
     {
-        [audioPlayer play];
-        [playStopButton setImage:stopButton forState:UIControlStateNormal];
-        audioPlaying = TRUE;
+        [self startPlayingAudio];
     }
+}
+
+-(void)initAndStartPlayingAudio
+{
+    if(audioPlayer)
+    {
+        [audioPlayer pause];
+        [audioPlayer release];
+    }
+    
+    [playStopButton setImage:[UIImage imageNamed: @"stopBBY.png"] forState:UIControlStateNormal];
+    
+    audioPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:podcastUrl]];
+    [audioPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+}
+
+-(void)startPlayingAudio
+{
+    [audioPlayer play];
+    [playStopButton setImage:[UIImage imageNamed: @"stopBBY.png"] forState:UIControlStateNormal];
+    audioPlaying = TRUE;
+}
+
+-(void)stopPlayingAudio
+{
+    [audioPlayer pause];
+    [playStopButton setImage:[UIImage imageNamed: @"playbby.png"] forState:UIControlStateNormal];            
+    audioPlaying = FALSE;
 }
 
 @end

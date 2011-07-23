@@ -17,8 +17,6 @@
     
     AVPlayer *audioPlayer;
     Boolean audioPlaying;
-    UIImage *playButton;
-    UIImage *stopButton;
     
     IBOutlet UIButton *playStopButton;
 }
@@ -27,5 +25,9 @@
 @property (nonatomic, retain) IBOutlet UITextView *summaryLabel;
 @property (nonatomic, retain) NSString *podcastUrl;
 @property (nonatomic, retain) UIButton *playStopButton;
+
+-(void)initAndStartPlayingAudio;
+-(void)startPlayingAudio;
+-(void)stopPlayingAudio;
 
 @end
