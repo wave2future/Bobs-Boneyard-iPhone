@@ -13,6 +13,9 @@
     UILabel *titleLabel;
     UILabel *subtitleLabel;
     UITextView *summaryLabel;
+    UISlider *streamSlider;
+    UILabel *streamCurTime;
+    UILabel *streamTotalTime;
     NSString *podcastUrl;
     
     AVPlayer *audioPlayer;
@@ -23,6 +26,9 @@
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, retain) IBOutlet UILabel *subtitleLabel;
 @property (nonatomic, retain) IBOutlet UITextView *summaryLabel;
+@property (nonatomic, retain) IBOutlet UISlider *streamSlider;
+@property (nonatomic, retain) IBOutlet UILabel *streamCurTime;
+@property (nonatomic, retain) IBOutlet UILabel *streamTotalTime;
 @property (nonatomic, retain) NSString *podcastUrl;
 @property (nonatomic, retain) UIButton *playStopButton;
 

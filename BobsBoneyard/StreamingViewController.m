@@ -13,6 +13,9 @@
 @synthesize titleLabel;
 @synthesize subtitleLabel;
 @synthesize summaryLabel;
+@synthesize streamSlider;
+@synthesize streamCurTime;
+@synthesize streamTotalTime;
 @synthesize podcastUrl;
 @synthesize playStopButton;
 
@@ -30,6 +33,9 @@
     [titleLabel release];
     [subtitleLabel release];
     [summaryLabel release];
+    [streamSlider release];
+    [streamCurTime release];
+    [streamTotalTime release];
     [podcastUrl release];
     
     [audioPlayer release];
@@ -99,6 +105,27 @@
 {
     if(object == audioPlayer && [keyPath isEqualToString:@"status"])
     {
+        int seconds = CMTimeGetSeconds(audioPlayer.currentItem.duration);
+        int hours = seconds / 3600;
+        seconds = seconds % 3600;
+        int minutes = seconds / 60;
+        seconds = seconds % 60;
+        
+        [streamTotalTime setText:[NSString stringWithFormat:@"%d:%.2d:%.2d", hours, minutes, seconds]];
+        [streamSlider setMaximumValue:CMTimeGetSeconds(audioPlayer.currentItem.duration)];
+        [audioPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1)
+                                                  queue:nil 
+                                             usingBlock:^(CMTime curTime)
+                                                        {
+                                                            int seconds = CMTimeGetSeconds(curTime);
+                                                            int hours = seconds / 3600;
+                                                            seconds = seconds % 3600;
+                                                            int minutes = seconds / 60;
+                                                            seconds = seconds % 60;
+                                                            
+                                                            [streamCurTime setText:[NSString stringWithFormat:@"%d:%.2d:%.2d", hours, minutes, seconds]];
+                                                            [streamSlider setValue:CMTimeGetSeconds(curTime) animated:YES];
+                                                        }];
         [self startPlayingAudio];
     }
 }
