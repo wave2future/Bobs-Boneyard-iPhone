@@ -60,11 +60,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    streamSliderChanging = FALSE;
+    
     NSError *setCategoryError = nil;
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
     if (setCategoryError) { NSLog(@"%@", [setCategoryError userInfo]); }
     
     [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [streamSlider addTarget:self action:@selector(setStreamSliderChanging:) forControlEvents:UIControlEventTouchDown];
+    [streamSlider addTarget:self action:@selector(streamSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    streamSlider.continuous = FALSE;
     audioPlaying = FALSE;
 }
 
@@ -79,6 +84,18 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void)streamSliderValueChanged:(id)sender
+{
+    streamSliderChanging = FALSE;
+    if(audioPlayer)
+        [audioPlayer seekToTime:CMTimeMakeWithSeconds(streamSlider.value, 1)];
+}
+
+-(void)setStreamSliderChanging:(id)sender
+{
+    streamSliderChanging = TRUE;
 }
 
 - (void)playStopButtonClick:(id)sender {
@@ -124,7 +141,8 @@
                                                             seconds = seconds % 60;
                                                             
                                                             [streamCurTime setText:[NSString stringWithFormat:@"%d:%.2d:%.2d", hours, minutes, seconds]];
-                                                            [streamSlider setValue:CMTimeGetSeconds(curTime) animated:YES];
+                                                            if(!streamSliderChanging)
+                                                                [streamSlider setValue:CMTimeGetSeconds(curTime) animated:YES];
                                                         }];
         [self startPlayingAudio];
     }
