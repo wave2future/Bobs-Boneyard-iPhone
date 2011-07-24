@@ -54,6 +54,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    NSError *setCategoryError = nil;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    if (setCategoryError) { NSLog(@"%@", [setCategoryError userInfo]); }
+    
     [playStopButton addTarget:self action:@selector(playStopButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     audioPlaying = FALSE;
 }
